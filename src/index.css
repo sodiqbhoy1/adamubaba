@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+*{
+  font-family: "Google Sans Code", monospace;
+}
+
+@layer base {
+	:root {
+		/* Option C: Deep Navy Core + Orange-Red Accent */
+		/* Navy scale (generated around #090040) */
+		--navy-50: 248 100% 99%;
+		--navy-100: 248 80% 96%;
+		--navy-150: 248 65% 93%;
+		--navy-200: 248 55% 88%;
+		--navy-300: 248 45% 78%;
+		--navy-400: 248 42% 60%;
+		--navy-500: 248 55% 45%;
+		--navy-600: 248 70% 32%;
+		--navy-700: 248 85% 22%;
+		--navy-800: 248 100% 15%;
+		--navy-900: 248 100% 11%; /* ~ #090040 base */
+
+		/* Accent (orange-red ~ #ff5a3c) */
+		--accent: 12 100% 60%;
+		--accent-hover: 12 100% 53%;
+		--accent-soft: 12 100% 96%;
+		--accent-border: 12 80% 85%;
+
+		/* Semantic tokens mapping */
+		--bg: var(--navy-50);
+		--bg-alt: var(--navy-100);
+		--surface: var(--navy-50);
+		--surface-alt: var(--navy-100);
+		--border: 248 35% 82%;
+		--primary: var(--navy-700);
+		--primary-soft: var(--navy-100);
+		--text: 248 55% 14%;
+		--text-soft: 248 25% 42%;
+	}
+
+}
+
+@layer utilities {
+	.animate-fade-in { animation: fade-in 0.8s both; }
+	.animate-slide-up { animation: slide-up 0.8s cubic-bezier(.16,.84,.44,1) both; }
+	.animate-scale-in { animation: scale-in 0.7s cubic-bezier(.16,.84,.44,1) both; }
+	.animation-delay-200 { animation-delay: .2s; }
+	.animation-delay-400 { animation-delay: .4s; }
+	.animation-delay-600 { animation-delay: .6s; }
+	@keyframes fade-in { from { opacity:0 } to { opacity:1 } }
+	@keyframes slide-up { from { transform: translateY(24px); opacity:0 } to { transform: translateY(0); opacity:1 } }
+	@keyframes scale-in { from { transform: scale(.9); opacity:0 } to { transform: scale(1); opacity:1 } }
+}
+
+
